@@ -1,4 +1,4 @@
-package com.example.demo.me;
+package msr.me;
 
 import java.util.List;
 
