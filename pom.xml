@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>msr</artifactId>
+	<artifactId>sbr</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>msr</name>
-	<description>Maven Spring Rest</description>
+	<name>sbr</name>
+	<description>A Spring Boot Rest Web App</description>
 
 	<properties>
 		<java.version>11</java.version>
