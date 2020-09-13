@@ -1,4 +1,4 @@
-package msr.me;
+package sbr.me;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
