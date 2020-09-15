@@ -4,13 +4,18 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "CODERS")
 public class Coder {
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CodGen")
+    @SequenceGenerator(sequenceName = "CODER_SEQ", allocationSize = 1, name = "CodGen")
     @Column(name = "CODER_ID")
     private long id;
 
@@ -27,18 +32,6 @@ public class Coder {
     private double salary;
 
     public Coder() {
-    }
-
-    public Coder(long id, String firstName, String lastName, double salary) {
-        this(id, firstName, lastName, LocalDate.now(), salary);
-    }
-
-    public Coder(long id, String firstName, String lastName, LocalDate hireDate, double salary) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.hireDate = hireDate;
-        this.salary = salary;
     }
 
     public long getId() {
