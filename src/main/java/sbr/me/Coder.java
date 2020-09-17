@@ -14,8 +14,11 @@ import javax.persistence.Table;
 @Table(name = "CODERS")
 public class Coder {
     @Id
+    // Oracle DB w/ sequence
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CodGen")
     @SequenceGenerator(sequenceName = "CODER_SEQ", allocationSize = 1, name = "CodGen")
+//    // MySQL auto_increment
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "CODER_ID")
     private long id;
 
