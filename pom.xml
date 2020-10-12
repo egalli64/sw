@@ -26,9 +26,8 @@
 		</dependency>
 		<!-- Oracle DB -->
 		<dependency>
-			<groupId>com.oracle</groupId>
+			<groupId>com.oracle.database.jdbc</groupId>
 			<artifactId>ojdbc10</artifactId>
-			<version>19.7</version>
 		</dependency>
 		<!-- MySQL -->
 		<!-- <dependency> -->
