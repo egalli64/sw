@@ -15,11 +15,11 @@ import org.springframework.test.web.servlet.MockMvc;
 @AutoConfigureMockMvc
 class HelloCtrlTest {
     @Autowired
-    private MockMvc mockMvc;
+    private MockMvc mock;
 
     @Test
-    void testSayHello() throws Exception {
-        this.mockMvc.perform(get("/hello")) //
+    void getHello() throws Exception {
+        mock.perform(get("/hello")) //
                 .andExpect(status().isOk()) //
                 .andExpect(jsonPath("$.message", is("Hello World!")));
     }
