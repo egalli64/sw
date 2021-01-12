@@ -1,5 +1,5 @@
 package sbr.me;
-
+/*
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -82,4 +82,4 @@ public class Coder {
         return "Coder [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", hireDate=" + hireDate
                 + ", salary=" + salary + "]";
     }
-}
+}*/

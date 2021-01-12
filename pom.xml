@@ -6,14 +6,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.7.RELEASE</version>
+        <version>2.4.1</version>
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>sbr</artifactId>
+    <artifactId>sw</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>sbr</name>
-    <description>A Spring Boot Rest Web App</description>
+    <name>sw</name>
+    <description>Spring Web</description>
 
     <properties>
         <java.version>11</java.version>
@@ -22,33 +22,38 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- <dependency> -->
+        <!-- <groupId>org.springframework.boot</groupId> -->
+        <!-- <artifactId>spring-boot-starter-data-jpa</artifactId> -->
+        <!-- </dependency> -->
         <!-- Oracle DB -->
         <!-- <dependency> -->
         <!-- <groupId>com.oracle.database.jdbc</groupId> -->
         <!-- <artifactId>ojdbc10</artifactId> -->
         <!-- </dependency> -->
         <!-- MySQL -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
+        <!-- <dependency> -->
+        <!-- <groupId>mysql</groupId> -->
+        <!-- <artifactId>mysql-connector-java</artifactId> -->
+        <!-- </dependency> -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
     </dependencies>
 
