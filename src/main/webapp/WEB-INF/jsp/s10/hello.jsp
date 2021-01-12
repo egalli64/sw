@@ -3,10 +3,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Hello JSP</title>
+<title>Spring View by JSP</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/css/simple.css">
 </head>
 <body>
-    <h1>Hello JSP</h1>
+    <h1>Spring View by JSP</h1>
     <p>${message}</p>
+    <%@include file="/fragment/footer.html"%>
 </body>
 </html>

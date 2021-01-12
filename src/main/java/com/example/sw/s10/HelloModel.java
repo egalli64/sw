@@ -1,5 +1,7 @@
 package com.example.sw.s10;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -8,29 +10,35 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HelloModel {
+    private static Logger log = LoggerFactory.getLogger(HelloModel.class);
+
     @GetMapping("/s10/hello")
-    public String hello(Model model) {
-        model.addAttribute("message", "A message generated in the controller");
+    public String helloModel(Model model) {
+        log.trace("enter helloModel()");
+        model.addAttribute("message", "A message by Model");
         return "/s10/hello";
     }
 
     @GetMapping("/s10/hello2")
-    public String hello2(ModelMap model) {
-        model.addAttribute("message", "Another message generated in the controller");
+    public String helloModelMap(ModelMap model) {
+        log.trace("enter helloModelMap()");
+        model.addAttribute("message", "A message by Model Map");
         return "/s10/hello";
     }
 
     @GetMapping("/s10/hello3")
-    public ModelAndView hello3(ModelAndView mav) {
+    public ModelAndView helloModelAndView(ModelAndView mav) {
+        log.trace("enter helloModelAndView()");
         mav.setViewName("/s10/hello");
-        mav.addObject("message", "A message generated in the controller on ModelAndView");
+        mav.addObject("message", "A message by ModelAndView");
         return mav;
     }
 
     @GetMapping("/s10/hello4")
-    public ModelAndView hello4() {
+    public ModelAndView helloModelAndViewLocal() {
+        log.trace("enter helloModelAndViewLocal()");
         ModelAndView mav = new ModelAndView("/s10/hello");
-        mav.addObject("message", "Another message generated in the controller on ModelAndView");
+        mav.addObject("message", "A message by ModelAndView (local)");
         return mav;
     }
 }

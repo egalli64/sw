@@ -14,7 +14,7 @@ public class HelloPlain {
     // same as @GetMapping
     @RequestMapping(method = RequestMethod.GET)
     public String hello() {
-        log.trace("enter");
+        log.trace("enter hello()");
 
         // redirect to the specified resource, not using standard view resolution
         return "redirect:/s08/hello.html";
