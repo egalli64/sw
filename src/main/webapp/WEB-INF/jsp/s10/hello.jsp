@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Spring View by JSP</title>
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" href="data:;base64,=">
 <link rel="stylesheet" type="text/css" href="/css/simple.css">
 </head>
 <body>
