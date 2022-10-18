@@ -4,6 +4,9 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class CoderSvc {
     public List<Coder> getAll() {
         List<Coder> result = new ArrayList<>();
