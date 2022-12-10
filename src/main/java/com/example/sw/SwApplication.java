@@ -13,7 +13,7 @@ public class SwApplication {
     }
 
     @Bean
-    public CommandLineRunner beanCounter(ApplicationContext ctx) {
+    protected CommandLineRunner beanCounter(ApplicationContext ctx) {
         return args -> System.out.println(ctx.getBeanDefinitionCount() + " beans available");
     }
 }
