@@ -1,4 +1,4 @@
-package com.example.sw.s07;
+package com.example.sw.s2;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/s07")
+@RequestMapping("/s2")
 public class CoderCtr {
     private static Logger log = LoggerFactory.getLogger(CoderCtr.class);
 
@@ -22,7 +22,7 @@ public class CoderCtr {
 
     @GetMapping("/coders")
     public List<Coder> coders() {
-        log.trace("enter coders()");
+        log.trace("Enter coders()");
 
         return svc.getAll();
     }

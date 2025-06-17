@@ -1,4 +1,4 @@
-package com.example.sw.s07;
+package com.example.sw.s2;
 
 import java.time.LocalDate;
 
