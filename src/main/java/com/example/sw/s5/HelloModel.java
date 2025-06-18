@@ -1,4 +1,4 @@
-package com.example.sw.s10;
+package com.example.sw.s5;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,32 +12,32 @@ import org.springframework.web.servlet.ModelAndView;
 public class HelloModel {
     private static Logger log = LoggerFactory.getLogger(HelloModel.class);
 
-    @GetMapping("/s10/hello")
+    @GetMapping("/s5/hello")
     public String helloModel(Model model) {
         log.trace("enter helloModel()");
         model.addAttribute("message", "A message by Model");
-        return "/s10/hello";
+        return "/s5/hello";
     }
 
-    @GetMapping("/s10/hello2")
+    @GetMapping("/s5/hello2")
     public String helloModelMap(ModelMap model) {
         log.trace("enter helloModelMap()");
         model.addAttribute("message", "A message by Model Map");
-        return "/s10/hello";
+        return "/s5/hello";
     }
 
-    @GetMapping("/s10/hello3")
+    @GetMapping("/s5/hello3")
     public ModelAndView helloModelAndView(ModelAndView mav) {
         log.trace("enter helloModelAndView()");
-        mav.setViewName("/s10/hello");
+        mav.setViewName("/s5/hello");
         mav.addObject("message", "A message by ModelAndView");
         return mav;
     }
 
-    @GetMapping("/s10/hello4")
+    @GetMapping("/s5/hello4")
     public ModelAndView helloModelAndViewLocal() {
         log.trace("enter helloModelAndViewLocal()");
-        ModelAndView mav = new ModelAndView("/s10/hello");
+        ModelAndView mav = new ModelAndView("/s5/hello");
         mav.addObject("message", "A message by ModelAndView (local)");
         return mav;
     }
