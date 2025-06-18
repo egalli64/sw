@@ -1,4 +1,4 @@
-package com.example.sw.s11;
+package com.example.sw.s6;
 
 import java.util.Arrays;
 import java.util.Optional;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class HelloParam {
     private static Logger log = LoggerFactory.getLogger(HelloParam.class);
 
-    @GetMapping("/s11/hello")
+    @GetMapping("/s6/hello")
     public String hello(@RequestParam int count, Model model) {
         log.trace("enter hello()");
         if (count < 1 || count > 10) {
@@ -22,10 +22,10 @@ public class HelloParam {
             count = 1;
         }
         model.addAttribute("message", "hello!".repeat(count));
-        return "/s11/hello";
+        return "/s6/hello";
     }
 
-    @GetMapping("/s11/hello2")
+    @GetMapping("/s6/hello2")
     public String helloAlias(@RequestParam(name = "count") int i, Model model) {
         log.trace("enter helloAlias()");
         if (i < 1 || i > 10) {
@@ -34,10 +34,10 @@ public class HelloParam {
         }
 
         model.addAttribute("message", "hello!".repeat(i));
-        return "/s11/hello";
+        return "/s6/hello";
     }
 
-    @GetMapping("/s11/hello3")
+    @GetMapping("/s6/hello3")
     public String helloNotRequired(@RequestParam(required = false) Integer count, Model model) {
         log.trace("enter helloAlias()");
         if (count != null) {
@@ -48,10 +48,10 @@ public class HelloParam {
 
             model.addAttribute("message", "hello!".repeat(count));
         }
-        return "/s11/hello";
+        return "/s6/hello";
     }
 
-    @GetMapping("/s11/hello4")
+    @GetMapping("/s6/hello4")
     public String helloOptional(@RequestParam Optional<Integer> count, Model model) {
         log.trace("enter helloOptional()");
         if (count.isPresent()) {
@@ -62,10 +62,10 @@ public class HelloParam {
             }
             model.addAttribute("message", "hello!".repeat(value));
         }
-        return "/s11/hello";
+        return "/s6/hello";
     }
 
-    @GetMapping("/s11/hello5")
+    @GetMapping("/s6/hello5")
     public String helloDefault(@RequestParam(defaultValue = "3") int count, Model model) {
         log.trace("enter helloDefault()");
 
@@ -74,14 +74,14 @@ public class HelloParam {
             count = 1;
         }
         model.addAttribute("message", "hello!".repeat(count));
-        return "/s11/hello";
+        return "/s6/hello";
     }
 
-    @GetMapping("/s11/hello6")
+    @GetMapping("/s6/hello6")
     public String helloList(@RequestParam int[] xs, Model model) {
         log.trace("enter helloDefault()");
 
         model.addAttribute("message", "X values: " + Arrays.toString(xs));
-        return "/s11/hello";
+        return "/s6/hello";
     }
 }
