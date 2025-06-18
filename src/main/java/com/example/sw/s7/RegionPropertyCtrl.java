@@ -1,4 +1,4 @@
-package com.example.sw.s12;
+package com.example.sw.s7;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -14,12 +14,12 @@ public class RegionPropertyCtrl {
     @Autowired
     private RegionRepo repo;
 
-    @GetMapping("/s12p/region/all")
+    @GetMapping("/s7p/region/all")
     public String getAll(Model model) {
         log.traceEntry("getAll");
 
         model.addAttribute("message", repo.getAll());
 
-        return "/s12/result";
+        return "/s7/result";
     }
 }

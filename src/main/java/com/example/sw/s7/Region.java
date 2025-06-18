@@ -1,4 +1,4 @@
-package com.example.sw.s12;
+package com.example.sw.s7;
 
 public class Region {
     private int id;
