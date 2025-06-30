@@ -9,10 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * A Spring MVC controller, specific for REST, mapping calls to /s2 URL
+ * A Spring MVC controller, mapping calls to /api/s2 URL, specific for REST
+ * (hence the commonly used /api prefix)
  */
 @RestController
-@RequestMapping("/s2")
+@RequestMapping("/api/s2")
 public class CoderCtr {
     private static Logger log = LoggerFactory.getLogger(CoderCtr.class);
 
