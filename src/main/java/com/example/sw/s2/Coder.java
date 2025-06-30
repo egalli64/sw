@@ -2,6 +2,9 @@ package com.example.sw.s2;
 
 import java.time.LocalDate;
 
+/**
+ * A JavaBean
+ */
 public class Coder {
     private int id;
     private String firstName;
