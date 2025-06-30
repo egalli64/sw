@@ -6,11 +6,11 @@ import java.time.LocalDate;
  * A JavaBean
  */
 public class Coder {
-    private int id;
+    private Integer id;
     private String firstName;
     private String lastName;
     private LocalDate hired;
-    private double salary;
+    private Double salary;
 
     public Coder() {
     }
@@ -23,11 +23,11 @@ public class Coder {
         this.salary = salary;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -55,11 +55,11 @@ public class Coder {
         this.hired = hired;
     }
 
-    public double getSalary() {
+    public Double getSalary() {
         return salary;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(Double salary) {
         this.salary = salary;
     }
 
