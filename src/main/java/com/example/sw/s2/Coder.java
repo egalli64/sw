@@ -15,7 +15,7 @@ public class Coder {
     public Coder() {
     }
 
-    public Coder(int id, String firstName, String lastName, LocalDate hired, double salary) {
+    public Coder(Integer id, String firstName, String lastName, LocalDate hired, Double salary) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
