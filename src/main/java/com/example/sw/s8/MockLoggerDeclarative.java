@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/s8")
-public class MockLogger {
-    private static Logger log = LoggerFactory.getLogger(MockLogger.class);
+public class MockLoggerDeclarative {
+    private static Logger log = LoggerFactory.getLogger(MockLoggerDeclarative.class);
 
     @PostMapping("/login")
     public String login(@RequestParam String user, HttpSession session) {

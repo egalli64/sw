@@ -13,7 +13,7 @@
     <nav>
         <span><a href="/index.html">home</a></span>
         <c:if test="${not empty user}">
-            <span><a href="logout">logout</a></span>
+            <span><a href="iLogout">logout</a></span>
         </c:if>
     </nav>
 
@@ -22,7 +22,7 @@
     </h2>
 
     <c:if test="${empty user}">
-        <form action="login" method="post">
+        <form action="iLogin" method="post">
             <label>Login <input name="user" placeholder="..." autofocus></label>
             <button>OK</button>
         </form>
