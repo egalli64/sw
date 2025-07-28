@@ -6,12 +6,12 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.5.3</version>
+		<version>3.5.4</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>sw</artifactId>
-	<version>5.6.1</version>
+	<version>5.7.0</version>
 	<name>sw</name>
 	<description>Spring Web</description>
 	<properties>
